@@ -528,6 +528,103 @@ def solar_abund(reference="asplund2009"):
     return solar_abu
 
 
+def bergemann_solar_abund(reference="bergemann2025"):
+    b25 = ['bergemann2025', 'bergemann_2025', 'b25', 'b_25']
+
+    if reference.lower() in b25:
+        berg_solar_abu = {
+            'H': 12.00,
+            'He': 10.922,
+            'Li': 1.04,
+            'Be': 1.21,
+            'B': 2.70,
+            'C': 8.51,
+            'N': 7.94,
+            'O': 8.76,
+            'F': 4.40,
+            'Ne': 8.15,
+            'Na': 6.29,
+            'Mg': 7.58,
+            'Al': 6.43,
+            'Si': 7.56,
+            'P': 5.44,
+            'S': 7.16,
+            'Cl': 5.43,
+            'Ar': 6.50,
+            'K': 5.09,
+            'Ca': 6.35,
+            'Sc': 3.13,
+            'Ti': 4.97,
+            'V': 3.89,
+            'Cr': 5.74,
+            'Mn': 5.52,
+            'Fe': 7.51,
+            'Co': 4.95,
+            'Ni': 6.24,
+            'Cu': 4.24,
+            'Zn': 4.55,
+            'Ga': 3.02,
+            'Ge': 3.62,
+            'As': 2.34,  # Meteoric abundances
+            'Se': 3.41,  # Meteoric abundances
+            'Br': 2.65,  # Meteoric abundances
+            'Kr': 3.31,
+            'Rb': 2.35,
+            'Sr': 2.93,
+            'Y': 2.30,
+            'Zr': 2.68,
+            'Nb': 1.47,
+            'Mo': 1.88,
+            'Ru': 1.75,
+            'Rh': 0.78,
+            'Pd': 1.57,
+            'Ag': 0.96,
+            'Cd': 1.77,
+            'In': 0.80,
+            'Sn': 2.02,
+            'Sb': 1.08,  # Meteoric abundances
+            'Te': 2.23,  # Meteoric abundances
+            'I': 1.76,  # Meteoric abundances
+            'Xe': 2.30,
+            'Cs': 1.12,  # Meteoric abundances
+            'Ba': 2.27,
+            'La': 1.10,
+            'Ce': 1.58,
+            'Pr': 0.75,
+            'Nd': 1.42,
+            'Sm': 0.95,
+            'Eu': 0.57,
+            'Gd': 1.08,
+            'Tb': 0.31,
+            'Dy': 1.10,
+            'Ho': 0.48,
+            'Er': 0.93,
+            'Tm': 0.11,
+            'Yb': 0.85,
+            'Lu': 0.10,
+            'Hf': 0.86,
+            'Ta': -0.11,  # Meteoric abundances
+            'W': 0.79,
+            'Re': 0.30,  # Meteoric abundances
+            'Os': 1.36,
+            'Ir': 1.42,
+            'Pt': 1.64,  # Meteoric abundances
+            'Au': 0.91,
+            'Hg': 1.14,  # Meteoric abundances
+            'Tl': 0.95,
+            'Pb': 1.95,
+            'Bi': 0.70,  # Meteoric abundances
+            'Th': 0.09,  # Meteoric abundances
+            'U': -0.50  # Meteoric abundances
+        }
+
+    else:
+        raise ValueError('This solar reference is not included at the moment. '
+                         'Available solar reference is Bergemann 2025. ')
+
+    return berg_solar_abu
+
+
 def solar_s_process_frac(reference='prantzos2020'):
     if reference.lower() == 'prantzos2020':
         s_frac = {
